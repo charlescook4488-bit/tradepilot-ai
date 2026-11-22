@@ -1,6 +1,6 @@
 {
-  "name": "TradePilot AI",
-  "short_name": "TradePilot",
+  "name": "TradePilot AI Live Trading",
+  "short_name": "TradePilot Live",
   "description": "Free automatic rule-based market scanner and risk planner",
   "start_url": "./",
   "scope": "./",

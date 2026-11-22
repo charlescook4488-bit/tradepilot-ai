@@ -1,33 +1,25 @@
-# TradePilot AI — Free Automatic Signals v3
+# TradePilot AI — Live Trading Edition (Manual Execution)
 
-## Included
-- iPhone-first Progressive Web App (PWA).
-- Every-60-second scan while page is open and visible.
-- Free public Binance spot kline/candlestick endpoint; no API key.
-- Selected pairs: BTC, ETH, BNB, SOL, XRP, DOGE, ADA against USDT.
-- Rule-based BUY / SELL / WAIT assessment using closed candles, EMA 9/21, RSI 14, MACD momentum direction, relative volume and ATR.
-- Indicative entry, ATR-based stop and 2R target for BUY/SELL setups.
-- Signal alert log while app is open.
-- Manual quotes for forex, stocks, indices and ETFs.
-- Manual risk calculator and local manual watchlist.
-- No broker integration, no automatic orders, no paid APIs or subscriptions.
+Free iPhone-friendly PWA for market scanning, manual trade planning, risk estimation and recording completed trades.
 
-## Important
-Signals are educational rule-based technical conditions, not AI predictions or recommendations. The confidence and risk scores are heuristic, not calibrated probabilities. Public endpoint access, rate limits, network conditions and local restrictions may affect scanning. This is not a 24/7 background scanner; iOS pauses browser/PWA work when the app is backgrounded or closed. Alerts are in-app only.
+## Update GitHub Pages
+1. Download and unzip this package.
+2. Open the `TradePilot_AI` folder.
+3. Upload and replace the files in the root of your existing GitHub Pages repository.
+4. Commit changes and wait for GitHub Pages to publish.
+5. Open the site in Safari and refresh. The service-worker cache version has changed.
 
-## Install
-Host all files over HTTPS (for example GitHub Pages), then open the URL in Safari on iPhone → Share → Add to Home Screen → Add.
+## New features
+- Trade plan and position estimate with 0.1–1.0% risk cap.
+- Cost-aware size calculation.
+- Actual-fill closed-trade ledger with net P/L, win rate, profit factor, average trade and recorded drawdown.
+- CSV export and safety checklist.
 
-
-## Version 4 — Conservative mode
-- Uses closed candles and confirms the selected timeframe with 15-minute and 1-hour trend snapshots.
-- Requires trend alignment, RSI range, MACD momentum, ADX >= 20, relative volume >= 1.10x, and room to nearby 20-candle support/resistance before issuing BUY/SELL; otherwise WAIT.
-- Checklist score is a rule tally, not a win probability. This is not a guarantee of accuracy or profitability.
-- Still signals only, no broker integration or order execution; scans only while the app is open.
-
-
-## Version 5 — Backtest and paper simulation
-- Historical Binance candle backtesting with simplified conservative local-timeframe rules, ATR stop/target, estimated 0.20% round-trip cost, win rate, profit factor, net trade returns and max drawdown.
-- Local-only manual paper-trade ledger stored in browser storage.
-- Historical rules do not reproduce the full live multi-timeframe system; past results do not predict future performance.
-- Signals only: no broker connection and no order execution.
+## Boundaries
+- Manual execution only: no broker connection, API keys or order placement.
+- Crypto scanner uses public Binance spot candles. Other markets use manually entered quotes.
+- Scanner only runs while open; iOS may suspend it.
+- Ledger is stored locally on this device/browser. Export backups.
+- Position sizing is a simplified GBP 1:1 price-value estimate, not universal for FX, CFDs, futures, options or leveraged products. Verify contract specs, pip/point value, account currency, margin, costs and slippage.
+- Stops may slip or gap; risk is not guaranteed to be capped.
+- Signals and backtests are not validated trading edges or forecasts.

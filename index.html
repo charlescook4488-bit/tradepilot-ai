@@ -34,7 +34,7 @@ header{display:flex;justify-content:space-between;align-items:center;margin:5px 
 <section id="alerts" class="hidden"><div class="card"><h3>Signal alerts</h3><p class="muted">New BUY/SELL rule matches and high-risk calculator results are logged while this app is open. This starter does not send background push notifications.</p><label class="check"><input id="alertBuy" type="checkbox" checked> Alert on BUY signals</label><label class="check"><input id="alertSell" type="checkbox" checked> Alert on SELL signals</label><label class="check"><input id="alertHighRisk" type="checkbox" checked> Warn on weak risk/reward structure</label><div id="alertsLog" class="result muted">No alerts yet.</div><button class="secondary" onclick="clearAlerts()">Clear alerts</button></div>
 <div class="card"><h3>Trading sessions · Brussels time</h3><p><b>London:</b> roughly 09:00–18:00</p><p><b>New York:</b> roughly 14:30–23:00</p><p><b>Overlap:</b> roughly 14:30–18:00</p><p class="muted">Times vary by daylight saving and exchange. Crypto markets trade around the clock.</p></div></section>
 <div class="footer">Educational tool only · Signals are rule-based estimates · Market data may fail or be delayed · No orders placed</div>
-</main><section id="backtest" class="hidden">
+<section id="backtest" class="hidden">
 <div class="hero"><div class="eyebrow">V5 · HISTORICAL TEST LAB</div><h2>Test the rules before risking money.</h2><p class="muted">Historical candle simulation and a local paper-trading ledger. No orders are sent and no broker is connected.</p></div>
 <div class="card"><h3>Historical backtest</h3>
 <div class="field"><label>Market</label><select id="btSymbol"><option>BTCUSDT</option><option>ETHUSDT</option><option>BNBUSDT</option><option>SOLUSDT</option><option>XRPUSDT</option><option>DOGEUSDT</option><option>ADAUSDT</option></select></div>
@@ -47,7 +47,7 @@ header{display:flex;justify-content:space-between;align-items:center;margin:5px 
 <div class="field"><label>Direction</label><select id="paperSide"><option value="long">Long</option><option value="short">Short</option></select></div>
 <button class="primary" onclick="savePaperTrade()">Record paper trade</button><div id="paperStats" class="result"></div><div id="paperList"></div><button class="secondary small" onclick="clearPaperTrades()">Clear paper ledger</button></div>
 <div class="notice">Assumptions: completed candles; entry at next candle open; stop = 1.5 ATR; target = 3 ATR; estimated round-trip cost = 0.20%. If stop and target are both touched in one candle, stop is assumed first. Funding, spread variation, taxes and market impact are excluded. The simplified historical rules do not reproduce the full live multi-timeframe filter.</div>
-</section>
+</section></main>
 <nav class="tabs"><button class="active" data-tab="home" onclick="show('home')">⌂<br>Home</button><button data-tab="scanner" onclick="show('scanner')">⌕<br>Scanner</button><button data-tab="risk" onclick="show('risk')">◈<br>Risk</button><button data-tab="alerts" onclick="show('alerts')">♧<br>Alerts</button><button data-tab="backtest" onclick="show('backtest')">▤ Test</button></nav>
 <script>
 const symbols=['BTCUSDT','ETHUSDT','BNBUSDT','SOLUSDT','XRPUSDT','DOGEUSDT','ADAUSDT'];

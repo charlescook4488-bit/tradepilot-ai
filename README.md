@@ -17,3 +17,10 @@ Signals are educational rule-based technical conditions, not AI predictions or r
 
 ## Install
 Host all files over HTTPS (for example GitHub Pages), then open the URL in Safari on iPhone → Share → Add to Home Screen → Add.
+
+
+## Version 4 — Conservative mode
+- Uses closed candles and confirms the selected timeframe with 15-minute and 1-hour trend snapshots.
+- Requires trend alignment, RSI range, MACD momentum, ADX >= 20, relative volume >= 1.10x, and room to nearby 20-candle support/resistance before issuing BUY/SELL; otherwise WAIT.
+- Checklist score is a rule tally, not a win probability. This is not a guarantee of accuracy or profitability.
+- Still signals only, no broker integration or order execution; scans only while the app is open.

@@ -24,3 +24,10 @@ Host all files over HTTPS (for example GitHub Pages), then open the URL in Safar
 - Requires trend alignment, RSI range, MACD momentum, ADX >= 20, relative volume >= 1.10x, and room to nearby 20-candle support/resistance before issuing BUY/SELL; otherwise WAIT.
 - Checklist score is a rule tally, not a win probability. This is not a guarantee of accuracy or profitability.
 - Still signals only, no broker integration or order execution; scans only while the app is open.
+
+
+## Version 5 — Backtest and paper simulation
+- Historical Binance candle backtesting with simplified conservative local-timeframe rules, ATR stop/target, estimated 0.20% round-trip cost, win rate, profit factor, net trade returns and max drawdown.
+- Local-only manual paper-trade ledger stored in browser storage.
+- Historical rules do not reproduce the full live multi-timeframe system; past results do not predict future performance.
+- Signals only: no broker connection and no order execution.
